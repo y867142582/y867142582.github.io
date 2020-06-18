@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>用python来搭建CoAP服务器和客户端</title>
+      <link href="/posts/3988338018/"/>
+      <url>/posts/3988338018/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、CoAP包的安装"><a href="#一、CoAP包的安装" class="headerlink" title="一、CoAP包的安装"></a>一、CoAP包的安装</h1><p>在pycharm中直接搜索安装<code>CoAPthon3</code>,然后安装即可</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CoAP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>typora-vue-theme主题介绍</title>
       <link href="/posts/3988338017/"/>
       <url>/posts/3988338017/</url>

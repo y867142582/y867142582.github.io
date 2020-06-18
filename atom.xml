@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yaoyufan96.tk/"/>
-  <updated>2020-06-17T07:36:56.325Z</updated>
+  <updated>2020-06-18T13:19:27.990Z</updated>
   <id>http://yaoyufan96.tk/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用python来搭建CoAP服务器和客户端</title>
+    <link href="http://yaoyufan96.tk/posts/3988338018/"/>
+    <id>http://yaoyufan96.tk/posts/3988338018/</id>
+    <published>2020-06-17T16:00:00.000Z</published>
+    <updated>2020-06-18T13:19:27.990Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、CoAP包的安装&quot;&gt;&lt;a href=&quot;#一、CoAP包的安装&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="http://yaoyufan96.tk/categories/Markdown/"/>
+    
+    
+      <category term="CoAP" scheme="http://yaoyufan96.tk/tags/CoAP/"/>
+    
+  </entry>
   
   <entry>
     <title>typora-vue-theme主题介绍</title>
