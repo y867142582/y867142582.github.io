@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="用python来搭建CoAP服务器和客户端, YaoYuFan">
+    <meta name="keywords" content="在Window10本地安装EMQ实现MQTT连接, YaoYuFan">
     <meta name="description" content="嵌入式开发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>用python来搭建CoAP服务器和客户端 | YaoYuFan</title>
+    <title>在Window10本地安装EMQ实现MQTT连接 | YaoYuFan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -221,12 +221,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">用python来搭建CoAP服务器和客户端</h1>
+                    <h1 class="description center-align post-title">在Window10本地安装EMQ实现MQTT连接</h1>
                 </div>
             </div>
         </div>
@@ -343,23 +343,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CoAP/">
-                                <span class="chip bg-color">CoAP</span>
+                            <a href="/tags/EMQ/">
+                                <span class="chip bg-color">EMQ</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Markdown/" class="post-category">
-                                Markdown
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -368,21 +359,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-18
+                    2020-06-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-18
+                    2020-06-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    20
+                    231
                 </div>
                 
 
@@ -399,7 +390,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、CoAP包的安装"><a href="#一、CoAP包的安装" class="headerlink" title="一、CoAP包的安装"></a>一、CoAP包的安装</h1><p>在pycharm中直接搜索安装<code>CoAPthon3</code>,然后安装即可</p>
+                <h1 id="1-EMQ简介"><a href="#1-EMQ简介" class="headerlink" title="1.EMQ简介"></a>1.EMQ简介</h1><p>​        EMQ是一款完全<a href="https://baike.baidu.com/item/开源/20720669" target="_blank" rel="noopener">开源</a>，高度可伸缩，高可用的分布式 <a href="https://baike.baidu.com/item/MQTT/3618851" target="_blank" rel="noopener">MQTT</a> <a href="https://baike.baidu.com/item/消息服务器/568190" target="_blank" rel="noopener">消息服务器</a>，同时也支持 <a href="https://baike.baidu.com/item/CoAP/6469713" target="_blank" rel="noopener">CoAP</a>/LwM2M 一站式 IoT 协议接入。EMQ 是 <a href="https://baike.baidu.com/item/5G/29780" target="_blank" rel="noopener">5G</a> 时代万物互联的消息引擎，适用于 <a href="https://baike.baidu.com/item/IoT/552548" target="_blank" rel="noopener">IoT</a>、M2M 和移动应用程序，可处理千万级别的并发客户端。</p>
+<h1 id="2-EMQ安装"><a href="#2-EMQ安装" class="headerlink" title="2.EMQ安装"></a>2.EMQ安装</h1><h4 id="2-1先去官网下载3-2-0的安装包"><a href="#2-1先去官网下载3-2-0的安装包" class="headerlink" title="2.1先去官网下载3.2.0的安装包"></a>2.1先去官网下载3.2.0的安装包</h4><p><a href="https://www.emqx.io/cn/downloads#broker" target="_blank" rel="noopener">https://www.emqx.io/cn/downloads#broker</a><br><img src="https://i.loli.net/2020/06/19/c8rd6zXqIHenYlG.png" alt=""></p>
+<h4 id="2-2然后解压缩，用CMD命令工具进入bin文件夹"><a href="#2-2然后解压缩，用CMD命令工具进入bin文件夹" class="headerlink" title="2.2然后解压缩，用CMD命令工具进入bin文件夹"></a>2.2然后解压缩，用CMD命令工具进入bin文件夹</h4><p><img src="https://i.loli.net/2020/06/19/wEZXbKqmv3OuDNh.png" alt=""></p>
+<p>然后输入 <code>emqx.cmd start</code>，启动EMQ服务器</p>
+<h4 id="2-3在CMD中找到电脑的IP地址，然后输入网站进入EMQ网页端"><a href="#2-3在CMD中找到电脑的IP地址，然后输入网站进入EMQ网页端" class="headerlink" title="2.3在CMD中找到电脑的IP地址，然后输入网站进入EMQ网页端"></a>2.3在CMD中找到电脑的IP地址，然后输入网站进入EMQ网页端</h4><p>​        在CMD中输入ipconfig,找到你自己电脑的IP地址，然后输入</p>
+<p><code>IP地址:18083</code> ，输入账号密码就能进入EMQ网页端。</p>
+<p><strong>账号</strong>：admin</p>
+<p><strong>密码</strong>：public</p>
+<p><img src="https://i.loli.net/2020/06/19/roOwURnavyNbIek.png" alt=""></p>
+<h1 id="3-开启插件"><a href="#3-开启插件" class="headerlink" title="3.开启插件"></a>3.开启插件</h1><p>​        为了下一步进行CoAP协议通信，找到插件开启CoAP插件</p>
+<p><img src="https://i.loli.net/2020/06/19/1NdvpJAsI6LGxwk.png" alt=""></p>
 
             </div>
             <hr/>
@@ -425,7 +426,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yaoyufan96.tk/posts/3988338018/">http://yaoyufan96.tk/posts/3988338018/</a>
+                    <a href="http://yaoyufan96.tk/posts/14201218/">http://yaoyufan96.tk/posts/14201218/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -463,8 +464,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CoAP/">
-                                    <span class="chip bg-color">CoAP</span>
+                                <a href="/tags/EMQ/">
+                                    <span class="chip bg-color">EMQ</span>
                                 </a>
                             
                         </div>
@@ -632,9 +633,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/14201218/">
                     <div class="card-image">
@@ -652,9 +654,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -663,6 +665,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -681,23 +684,25 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/3988338017/">
+                <a href="/posts/3988338018/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
                         
-                        <span class="card-title">typora-vue-theme主题介绍</span>
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="用python来搭建CoAP服务器和客户端">
+                        
+                        <span class="card-title">用python来搭建CoAP服务器和客户端</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+                            一、CoAP包的安装在pycharm中直接搜索安装CoAPthon3,然后安装即可
+
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
                             </span>
                         <span class="publish-author">
                             
@@ -714,12 +719,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/object-Object/">
-                        <span class="chip bg-color">[object Object]</span>
+                    <a href="/tags/CoAP/">
+                        <span class="chip bg-color">CoAP</span>
                     </a>
                     
                 </div>

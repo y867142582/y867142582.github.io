@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>在Window10本地安装EMQ实现MQTT连接</title>
+      <link href="/posts/14201218/"/>
+      <url>/posts/14201218/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-EMQ简介"><a href="#1-EMQ简介" class="headerlink" title="1.EMQ简介"></a>1.EMQ简介</h1><p>​        EMQ是一款完全<a href="https://baike.baidu.com/item/开源/20720669" target="_blank" rel="noopener">开源</a>，高度可伸缩，高可用的分布式 <a href="https://baike.baidu.com/item/MQTT/3618851" target="_blank" rel="noopener">MQTT</a> <a href="https://baike.baidu.com/item/消息服务器/568190" target="_blank" rel="noopener">消息服务器</a>，同时也支持 <a href="https://baike.baidu.com/item/CoAP/6469713" target="_blank" rel="noopener">CoAP</a>/LwM2M 一站式 IoT 协议接入。EMQ 是 <a href="https://baike.baidu.com/item/5G/29780" target="_blank" rel="noopener">5G</a> 时代万物互联的消息引擎，适用于 <a href="https://baike.baidu.com/item/IoT/552548" target="_blank" rel="noopener">IoT</a>、M2M 和移动应用程序，可处理千万级别的并发客户端。</p><h1 id="2-EMQ安装"><a href="#2-EMQ安装" class="headerlink" title="2.EMQ安装"></a>2.EMQ安装</h1><h4 id="2-1先去官网下载3-2-0的安装包"><a href="#2-1先去官网下载3-2-0的安装包" class="headerlink" title="2.1先去官网下载3.2.0的安装包"></a>2.1先去官网下载3.2.0的安装包</h4><p><a href="https://www.emqx.io/cn/downloads#broker" target="_blank" rel="noopener">https://www.emqx.io/cn/downloads#broker</a><br><img src="https://i.loli.net/2020/06/19/c8rd6zXqIHenYlG.png" alt=""></p><h4 id="2-2然后解压缩，用CMD命令工具进入bin文件夹"><a href="#2-2然后解压缩，用CMD命令工具进入bin文件夹" class="headerlink" title="2.2然后解压缩，用CMD命令工具进入bin文件夹"></a>2.2然后解压缩，用CMD命令工具进入bin文件夹</h4><p><img src="https://i.loli.net/2020/06/19/wEZXbKqmv3OuDNh.png" alt=""></p><p>然后输入 <code>emqx.cmd start</code>，启动EMQ服务器</p><h4 id="2-3在CMD中找到电脑的IP地址，然后输入网站进入EMQ网页端"><a href="#2-3在CMD中找到电脑的IP地址，然后输入网站进入EMQ网页端" class="headerlink" title="2.3在CMD中找到电脑的IP地址，然后输入网站进入EMQ网页端"></a>2.3在CMD中找到电脑的IP地址，然后输入网站进入EMQ网页端</h4><p>​        在CMD中输入ipconfig,找到你自己电脑的IP地址，然后输入</p><p><code>IP地址:18083</code> ，输入账号密码就能进入EMQ网页端。</p><p><strong>账号</strong>：admin</p><p><strong>密码</strong>：public</p><p><img src="https://i.loli.net/2020/06/19/roOwURnavyNbIek.png" alt=""></p><h1 id="3-开启插件"><a href="#3-开启插件" class="headerlink" title="3.开启插件"></a>3.开启插件</h1><p>​        为了下一步进行CoAP协议通信，找到插件开启CoAP插件</p><p><img src="https://i.loli.net/2020/06/19/1NdvpJAsI6LGxwk.png" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> EMQ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>用python来搭建CoAP服务器和客户端</title>
       <link href="/posts/3988338018/"/>
       <url>/posts/3988338018/</url>

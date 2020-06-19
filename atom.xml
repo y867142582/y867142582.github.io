@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yaoyufan96.tk/"/>
-  <updated>2020-06-18T13:19:27.990Z</updated>
+  <updated>2020-06-19T02:14:50.189Z</updated>
   <id>http://yaoyufan96.tk/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Window10本地安装EMQ实现MQTT连接</title>
+    <link href="http://yaoyufan96.tk/posts/14201218/"/>
+    <id>http://yaoyufan96.tk/posts/14201218/</id>
+    <published>2020-06-19T01:31:13.000Z</published>
+    <updated>2020-06-19T02:14:50.189Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-EMQ简介&quot;&gt;&lt;a href=&quot;#1-EMQ简介&quot; class=&quot;headerlink&quot; title=&quot;1.EMQ简介&quot;&gt;&lt;/a&gt;1.EMQ简介&lt;/h1&gt;&lt;p&gt;​        EMQ是一款完全&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="EMQ" scheme="http://yaoyufan96.tk/tags/EMQ/"/>
+    
+  </entry>
   
   <entry>
     <title>用python来搭建CoAP服务器和客户端</title>
