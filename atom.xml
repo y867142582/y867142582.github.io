@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yaoyufan96.tk/"/>
-  <updated>2020-06-19T02:14:50.189Z</updated>
+  <updated>2020-06-19T06:42:45.928Z</updated>
   <id>http://yaoyufan96.tk/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>在Window10本地安装EMQ实现MQTT连接</title>
-    <link href="http://yaoyufan96.tk/posts/14201218/"/>
-    <id>http://yaoyufan96.tk/posts/14201218/</id>
-    <published>2020-06-19T01:31:13.000Z</published>
-    <updated>2020-06-19T02:14:50.189Z</updated>
+    <title>CoAP协议解析</title>
+    <link href="http://yaoyufan96.tk/posts/2937813511/"/>
+    <id>http://yaoyufan96.tk/posts/2937813511/</id>
+    <published>2020-06-19T05:47:44.000Z</published>
+    <updated>2020-06-19T06:42:45.928Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,34 @@
       
         
         
-          &lt;h1 id=&quot;1-EMQ简介&quot;&gt;&lt;a href=&quot;#1-EMQ简介&quot; class=&quot;headerlink&quot; title=&quot;1.EMQ简介&quot;&gt;&lt;/a&gt;1.EMQ简介&lt;/h1&gt;&lt;p&gt;​        EMQ是一款完全&lt;a
+          &lt;p&gt;CoAP协议的基础知识这边就不多说了，具体可以通过下面的文章、表格进行学习:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;基于NB-IoT的CoAP协议浅析&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="CoAP" scheme="http://yaoyufan96.tk/tags/CoAP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在Window10本地安装EMQ实现MQTT连接</title>
+    <link href="http://yaoyufan96.tk/posts/14201218/"/>
+    <id>http://yaoyufan96.tk/posts/14201218/</id>
+    <published>2020-06-19T01:31:13.000Z</published>
+    <updated>2020-06-19T06:46:06.196Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-EMQ简介&quot;&gt;&lt;a href=&quot;#1-EMQ简介&quot; class=&quot;headerlink&quot; title=&quot;1. EMQ简介&quot;&gt;&lt;/a&gt;1. EMQ简介&lt;/h2&gt;&lt;p&gt;​        EMQ是一款完全&lt;a
         
       
     
@@ -46,7 +73,7 @@
     <link href="http://yaoyufan96.tk/posts/3988338018/"/>
     <id>http://yaoyufan96.tk/posts/3988338018/</id>
     <published>2020-06-17T16:00:00.000Z</published>
-    <updated>2020-06-18T13:19:27.990Z</updated>
+    <updated>2020-06-19T07:11:51.216Z</updated>
     
     <summary type="html">
     
@@ -54,7 +81,7 @@
       
         
         
-          &lt;h1 id=&quot;一、CoAP包的安装&quot;&gt;&lt;a href=&quot;#一、CoAP包的安装&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;1-CoAP包的安装&quot;&gt;&lt;a href=&quot;#1-CoAP包的安装&quot; class=&quot;headerlink&quot; title=&quot;1. CoAP包的安装&quot;&gt;&lt;/a&gt;1.
         
       
     
@@ -65,27 +92,6 @@
     
     
       <category term="CoAP" scheme="http://yaoyufan96.tk/tags/CoAP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>typora-vue-theme主题介绍</title>
-    <link href="http://yaoyufan96.tk/posts/3988338017/"/>
-    <id>http://yaoyufan96.tk/posts/3988338017/</id>
-    <published>2018-09-07T01:25:00.000Z</published>
-    <updated>2020-06-17T07:36:56.325Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="Markdown" scheme="http://yaoyufan96.tk/categories/Markdown/"/>
-    
-    
-      <category term="Typora" scheme="http://yaoyufan96.tk/tags/Typora/"/>
-    
-      <category term="[object Object]" scheme="http://yaoyufan96.tk/tags/object-Object/"/>
     
   </entry>
   

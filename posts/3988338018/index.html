@@ -74,11 +74,11 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/archives" class="waves-effect waves-light">
+    <a href="/tags" class="waves-effect waves-light">
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>归档</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -133,11 +133,11 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/archives" class="waves-effect waves-light">
+		<a href="/tags" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			归档
+			标签
 		</a>
           
         </li>
@@ -375,14 +375,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-18
+                    2020-06-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    20
+                    668
                 </div>
                 
 
@@ -399,7 +399,89 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、CoAP包的安装"><a href="#一、CoAP包的安装" class="headerlink" title="一、CoAP包的安装"></a>一、CoAP包的安装</h1><p>在pycharm中直接搜索安装<code>CoAPthon3</code>,然后安装即可</p>
+                <h2 id="1-CoAP包的安装"><a href="#1-CoAP包的安装" class="headerlink" title="1. CoAP包的安装"></a>1. CoAP包的安装</h2><p>在pycharm中直接搜索安装<code>CoAPthon3</code>,然后安装即可</p>
+<p><img src="https://i.loli.net/2020/06/19/sjV7nWaf1RdSh9U.png" alt=""><br><img src="https://i.loli.net/2020/06/19/guoPOKhFsnXTebB.png" alt=""><br><img src="https://i.loli.net/2020/06/19/HJcnQ4DTPsbrLdV.png" alt=""></p>
+<h2 id="2-建立CoAP服务器"><a href="#2-建立CoAP服务器" class="headerlink" title="2. 建立CoAP服务器"></a>2. 建立CoAP服务器</h2><p>首先我们需要创建两个类，然后通过创建的类来实例化一个CoAP服务端对象，创建完成后开始监听就好了。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> coapthon<span class="token punctuation">.</span>server<span class="token punctuation">.</span>coap <span class="token keyword">import</span> CoAP
+<span class="token keyword">from</span> coapthon<span class="token punctuation">.</span>resources<span class="token punctuation">.</span>resource <span class="token keyword">import</span> Resource
+
+Host <span class="token operator">=</span> <span class="token string">"192.168.2.171"</span>        <span class="token comment" spellcheck="true"># 本机IP地址</span>
+Port <span class="token operator">=</span> <span class="token number">5683</span>                      <span class="token comment" spellcheck="true"># 端口号</span>
+
+<span class="token keyword">class</span> <span class="token class-name">BasicResource</span><span class="token punctuation">(</span>Resource<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"BasicResource"</span><span class="token punctuation">,</span> coap_server<span class="token operator">=</span>None<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        super<span class="token punctuation">(</span>BasicResource<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>name<span class="token punctuation">,</span> coap_server<span class="token punctuation">,</span> visible<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+                                            observable<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> allow_children<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>payload <span class="token operator">=</span> <span class="token string">"Basic Resource"</span>
+
+    <span class="token keyword">def</span> <span class="token function">render_GET</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self
+
+    <span class="token keyword">def</span> <span class="token function">render_PUT</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>payload <span class="token operator">=</span> request<span class="token punctuation">.</span>payload
+        <span class="token keyword">return</span> self
+
+    <span class="token keyword">def</span> <span class="token function">render_POST</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> BasicResource<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        res<span class="token punctuation">.</span>location_query <span class="token operator">=</span> request<span class="token punctuation">.</span>uri_query
+        res<span class="token punctuation">.</span>payload <span class="token operator">=</span> request<span class="token punctuation">.</span>payload
+        <span class="token keyword">return</span> res
+
+    <span class="token keyword">def</span> <span class="token function">render_DELETE</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+<span class="token keyword">class</span> <span class="token class-name">CoAPServer</span><span class="token punctuation">(</span>CoAP<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> host<span class="token punctuation">,</span> port<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        CoAP<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span><span class="token punctuation">(</span>host<span class="token punctuation">,</span> port<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>add_resource<span class="token punctuation">(</span><span class="token string">'basic'</span><span class="token punctuation">,</span> BasicResource<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"CoAPServer IP addr : %s port : %d "</span> <span class="token operator">%</span> <span class="token punctuation">(</span>Host<span class="token punctuation">,</span> Port<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    server <span class="token operator">=</span> CoAPServer<span class="token punctuation">(</span>Host<span class="token punctuation">,</span>Port<span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        server<span class="token punctuation">.</span>listen<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span> KeyboardInterrupt<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Server Shutdown"</span><span class="token punctuation">)</span>
+        server<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Exiting..."</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h2 id="3-建立CoAP客户端"><a href="#3-建立CoAP客户端" class="headerlink" title="3. 建立CoAP客户端"></a>3. 建立CoAP客户端</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> time
+<span class="token keyword">from</span> coapthon<span class="token punctuation">.</span>client<span class="token punctuation">.</span>helperclient <span class="token keyword">import</span> HelperClient
+
+host <span class="token operator">=</span> <span class="token string">"192.168.2.171"</span>
+port <span class="token operator">=</span> <span class="token number">5683</span>
+path <span class="token operator">=</span> <span class="token string">"/mqtt/topic1?c=client1&amp;u=tom&amp;p=secret"</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    client <span class="token operator">=</span> HelperClient<span class="token punctuation">(</span>server<span class="token operator">=</span><span class="token punctuation">(</span>host<span class="token punctuation">,</span> port<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span> <span class="token punctuation">:</span>
+        response <span class="token operator">=</span> client<span class="token punctuation">.</span>put<span class="token punctuation">(</span>path<span class="token punctuation">,</span><span class="token string">"Hello world!"</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>pretty_print<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 每隔5秒发送一次数据</span>
+    client<span class="token punctuation">.</span>stop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p><code>path = &quot;/mqtt/topic1?c=client1&amp;u=tom&amp;p=secret&quot;</code></p>
+<p>路径的格式是由EMQ的CoAP插件决定的，具体可以上<a href="https://docs.emqx.io/broker/latest/cn/advanced/plugins.html" target="_blank" rel="noopener">官网文档查询</a></p>
+<h2 id="4-运行测试"><a href="#4-运行测试" class="headerlink" title="4. 运行测试"></a>4. 运行测试</h2><h3 id="4-1-在pycharm里同时开启服务器和客户端"><a href="#4-1-在pycharm里同时开启服务器和客户端" class="headerlink" title="4.1 在pycharm里同时开启服务器和客户端"></a>4.1 在pycharm里同时开启服务器和客户端</h3><p>可以从服务器中看到客户端每隔5S发送一次<code>hello word!</code><br><img src="https://i.loli.net/2020/06/19/bkQLWBSdCTro1KN.png" alt=""></p>
+<h3 id="4-2-在pycharm开启客户端，连接EMQ"><a href="#4-2-在pycharm开启客户端，连接EMQ" class="headerlink" title="4.2 在pycharm开启客户端，连接EMQ"></a>4.2 在pycharm开启客户端，连接EMQ</h3><p>在EMQ网页端连接中可以看到已经连上，然后点击<strong>Websocket</strong>连接，订阅主题<strong>topic1</strong>，然后再下方订阅消息列表可以看到每隔5S就会出现<strong>hello world!</strong><br><img src="https://i.loli.net/2020/06/19/M24loEyqVDG7Cr6.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/19/nqljQKRN7aOk5M1.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/19/e2mYX1OGLsECQ3B.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/19/K6VQ8GbZAOYvgk4.png" alt=""></p>
+<h3 id="4-3-UDP模拟CoAP协议"><a href="#4-3-UDP模拟CoAP协议" class="headerlink" title="4.3 UDP模拟CoAP协议"></a>4.3 UDP模拟CoAP协议</h3><p>CoAP协议底层是UDP协议，再UDP上层再封装了一层协议就变成了CoAP协议，具体什么是CoAP协议请看文章</p>
+<p><a href="http://yaoyufan96.tk/posts/2937813511/">CoAp协议解析</a></p>
+<p>我们用pycharm打开CoAP服务器，找一个UDP工具连接连接服务器，发送如下指定的数据包</p>
+<pre class=" language-c"><code class="language-c"><span class="token number">42</span> <span class="token number">03</span> ef <span class="token number">89</span> 4d <span class="token number">55</span> b4 6d <span class="token number">71</span> <span class="token number">74</span> <span class="token number">74</span> <span class="token number">06</span> <span class="token number">74</span> <span class="token number">6f</span> <span class="token number">70</span> <span class="token number">69</span> <span class="token number">63</span> <span class="token number">31</span> <span class="token number">49</span> <span class="token number">63</span> 3d <span class="token number">63</span> 6c <span class="token number">69</span> <span class="token number">65</span> 6e <span class="token number">74</span> <span class="token number">31</span> <span class="token number">05</span> <span class="token number">75</span> 3d <span class="token number">74</span> <span class="token number">6f</span> 6d <span class="token number">08</span> <span class="token number">70</span> 3d <span class="token number">73</span> <span class="token number">65</span> <span class="token number">63</span> <span class="token number">72</span> <span class="token number">65</span> <span class="token number">74</span> ff <span class="token number">48</span> <span class="token number">65</span> 6c 6c <span class="token number">6f</span> <span class="token number">20</span> <span class="token number">77</span> <span class="token number">6f</span> <span class="token number">72</span> 6c <span class="token number">64</span> <span class="token number">21</span></code></pre>
+<p>注意服务器地址也是本地IP！</p>
+<p><img src="https://i.loli.net/2020/06/19/lgIwn6Tpy2OSXvU.png" alt=""></p>
+<p>这个数据包发送的数据是<code>hello world!</code>,我们可以看到数据已经成功发送到服务器了</p>
+<p><img src="https://i.loli.net/2020/06/19/W3STNqhM6lmA2EX.png" alt=""></p>
+<h3 id="4-4-通过UDP发送到EMQ"><a href="#4-4-通过UDP发送到EMQ" class="headerlink" title="4.4 通过UDP发送到EMQ"></a>4.4 通过UDP发送到EMQ</h3><p>一样的操作这边就不演示了，主要连接EMQ的IP地址，然后订阅再查看消息即可。</p>
+<p><strong>！！注意</strong></p>
+<p><strong>每条消息发送的message id 必须保证唯一，不然服务器是收不到消息的。</strong></p>
 
             </div>
             <hr/>
@@ -648,7 +730,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.EMQ简介​        EMQ是一款完全开源，高度可伸缩，高可用的分布式 MQTT 消息服务器，同时也支持 CoAP/LwM2M 一站式 IoT 协议接入。EMQ 是 5G 时代万物互联的消息引擎，适用于 IoT、M2M 和移动应用
+                            1. EMQ简介​        EMQ是一款完全开源，高度可伸缩，高可用的分布式 MQTT 消息服务器，同时也支持 CoAP/LwM2M 一站式 IoT 协议接入。EMQ 是 5G 时代万物互联的消息引擎，适用于 IoT、M2M 和移动应
                         
                     </div>
                     <div class="publish-info">
@@ -678,26 +760,30 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/posts/3988338017/">
+                <a href="/posts/3988338018/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
                         
-                        <span class="card-title">typora-vue-theme主题介绍</span>
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="用python来搭建CoAP服务器和客户端">
+                        
+                        <span class="card-title">用python来搭建CoAP服务器和客户端</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+                            1. CoAP包的安装在pycharm中直接搜索安装CoAPthon3,然后安装即可
+
+2. 建立CoAP服务器首先我们需要创建两个类，然后通过创建的类来实例化一个CoAP服务端对象，创建完成后开始监听就好了。
+from coapthon.
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
                             </span>
                         <span class="publish-author">
                             
@@ -711,15 +797,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/object-Object/">
-                        <span class="chip bg-color">[object Object]</span>
+                    <a href="/tags/CoAP/">
+                        <span class="chip bg-color">CoAP</span>
                     </a>
                     
                 </div>

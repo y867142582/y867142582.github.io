@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="typora-vue-theme主题介绍, YaoYuFan">
+    <meta name="keywords" content="CoAP协议解析, YaoYuFan">
     <meta name="description" content="嵌入式开发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>typora-vue-theme主题介绍 | YaoYuFan</title>
+    <title>CoAP协议解析 | YaoYuFan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -74,11 +74,11 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/archives" class="waves-effect waves-light">
+    <a href="/tags" class="waves-effect waves-light">
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>归档</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -133,11 +133,11 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/archives" class="waves-effect waves-light">
+		<a href="/tags" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			归档
+			标签
 		</a>
           
         </li>
@@ -221,12 +221,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/source/images/xxx.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">typora-vue-theme主题介绍</h1>
+                    <h1 class="description center-align post-title">CoAP协议解析</h1>
                 </div>
             </div>
         </div>
@@ -236,10 +236,105 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -248,27 +343,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
-                            </a>
-                        
-                            <a href="/tags/object-Object/">
-                                <span class="chip bg-color">[object Object]</span>
+                            <a href="/tags/CoAP/">
+                                <span class="chip bg-color">CoAP</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Markdown/" class="post-category">
-                                Markdown
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -277,21 +359,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-09-07
+                    2020-06-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-17
+                    2020-06-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    239
                 </div>
                 
 
@@ -308,7 +390,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>CoAP协议的基础知识这边就不多说了，具体可以通过下面的文章、表格进行学习:</p>
+<p><strong>基于NB-IoT的CoAP协议浅析</strong></p>
+<p><a href="https://blog.csdn.net/liwei16611/article/details/82700365?ops_request_misc=&request_id=&biz_id=102&utm_term=基于NBIOT的coap&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-82700365" target="_blank" rel="noopener">https://blog.csdn.net/liwei16611/article/details/82700365?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=%E5%9F%BA%E4%BA%8ENBIOT%E7%9A%84coap&amp;utm_medium=distribute.pc_search_result.none-task-blog-2<del>all</del>sobaiduweb~default-0-82700365</a></p>
+<p><a href="https://wwe.lanzous.com/iXZ8ydtjy2h" target="_blank" rel="noopener">一张表搞懂CoAP</a></p>
+<h2 id="用Wireshark工具来抓取数据包"><a href="#用Wireshark工具来抓取数据包" class="headerlink" title="用Wireshark工具来抓取数据包"></a>用Wireshark工具来抓取数据包</h2><p>通过<strong>Wireshark</strong>来抓取CoAP协议的数据包，对数据包的学习掌握它的用法</p>
+<p>打开工具在地址栏里输入<code>udp.port == 5683</code>来找到想要的数据</p>
+<p><img src="https://i.loli.net/2020/06/19/quOEnM3NgmkFJxo.png" alt=""></p>
+<p>我们找到含有数据的一条数据包打开，可以看到底层是UDP的数据</p>
+<p>在上层封装了一些数据就变成了CoAP协议。</p>
+<p><img src="https://i.loli.net/2020/06/19/DlqysOVXGzgTFLB.png" alt=""></p>
+<pre class=" language-c"><code class="language-c"><span class="token number">42</span> <span class="token number">03</span> ef <span class="token number">89</span> 4d <span class="token number">55</span> b4 6d <span class="token number">71</span> <span class="token number">74</span> <span class="token number">74</span> <span class="token number">06</span> <span class="token number">74</span> <span class="token number">6f</span> <span class="token number">70</span> <span class="token number">69</span> <span class="token number">63</span> <span class="token number">31</span> <span class="token number">49</span> <span class="token number">63</span> 3d <span class="token number">63</span> 6c <span class="token number">69</span>  <span class="token number">65</span> 6e <span class="token number">74</span> <span class="token number">31</span> <span class="token number">05</span> <span class="token number">75</span> 3d <span class="token number">74</span> <span class="token number">6f</span> 6d <span class="token number">08</span> <span class="token number">70</span> 3d <span class="token number">73</span> <span class="token number">65</span> <span class="token number">63</span>  <span class="token number">72</span> <span class="token number">65</span> <span class="token number">74</span> ff <span class="token number">48</span> <span class="token number">65</span> 6c 6c <span class="token number">6f</span> <span class="token number">20</span> <span class="token number">77</span> <span class="token number">6f</span> <span class="token number">72</span> 6c <span class="token number">64</span> <span class="token number">21</span></code></pre>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
             </div>
             <hr/>
 
@@ -323,7 +416,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">赵奇</a>
+                    <a href="/about" rel="external nofollow noreferrer">YYF</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -333,7 +426,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yaoyufan96.tk/posts/3988338017/">http://yaoyufan96.tk/posts/3988338017/</a>
+                    <a href="http://yaoyufan96.tk/posts/2937813511/">http://yaoyufan96.tk/posts/2937813511/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -346,7 +439,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">赵奇</a>
+                    <a href="/about" target="_blank">YYF</a>
                     !
                 </span>
             </div>
@@ -371,12 +464,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Typora/">
-                                    <span class="chip bg-color">Typora</span>
-                                </a>
-                            
-                                <a href="/tags/object-Object/">
-                                    <span class="chip bg-color">[object Object]</span>
+                                <a href="/tags/CoAP/">
+                                    <span class="chip bg-color">CoAP</span>
                                 </a>
                             
                         </div>
@@ -544,42 +633,41 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/3988338018/">
+                <a href="/posts/2937813511/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="用python来搭建CoAP服务器和客户端">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="CoAP协议解析">
                         
-                        <span class="card-title">用python来搭建CoAP服务器和客户端</span>
+                        <span class="card-title">CoAP协议解析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、CoAP包的安装在pycharm中直接搜索安装CoAPthon3,然后安装即可
-
+                            CoAP协议的基础知识这边就不多说了，具体可以通过下面的文章、表格进行学习:
+基于NB-IoT的CoAP协议浅析
+https://blog.csdn.net/liwei16611/article/details/82700365?ops_r
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-19
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            YYF
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -595,49 +683,41 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/3988338017/">
+                <a href="/posts/14201218/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
                         
-                        <span class="card-title">typora-vue-theme主题介绍</span>
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="在Window10本地安装EMQ实现MQTT连接">
+                        
+                        <span class="card-title">在Window10本地安装EMQ实现MQTT连接</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+                            1. EMQ简介​        EMQ是一款完全开源，高度可伸缩，高可用的分布式 MQTT 消息服务器，同时也支持 CoAP/LwM2M 一站式 IoT 协议接入。EMQ 是 5G 时代万物互联的消息引擎，适用于 IoT、M2M 和移动应
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-19
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            YYF
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/object-Object/">
-                        <span class="chip bg-color">[object Object]</span>
+                    <a href="/tags/EMQ/">
+                        <span class="chip bg-color">EMQ</span>
                     </a>
                     
                 </div>
@@ -713,6 +793,100 @@
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
