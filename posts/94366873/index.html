@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CoAP协议解析, YaoYuFan">
+    <meta name="keywords" content="移植4.3寸RGB屏驱动到野火F429V1开发板, YaoYuFan">
     <meta name="description" content="嵌入式开发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CoAP协议解析 | YaoYuFan</title>
+    <title>移植4.3寸RGB屏驱动到野火F429V1开发板 | YaoYuFan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -221,12 +221,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CoAP协议解析</h1>
+                    <h1 class="description center-align post-title">移植4.3寸RGB屏驱动到野火F429V1开发板</h1>
                 </div>
             </div>
         </div>
@@ -343,8 +343,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CoAP/">
-                                <span class="chip bg-color">CoAP</span>
+                            <a href="/tags/STemwin/">
+                                <span class="chip bg-color">STemwin</span>
                             </a>
                         
                     </div>
@@ -359,21 +359,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-19
+                    2020-06-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-19
+                    2020-06-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    239
+                    479
                 </div>
                 
 
@@ -390,18 +390,60 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>CoAP协议的基础知识这边就不多说了，具体可以通过下面的文章、表格进行学习:</p>
-<p><strong>基于NB-IoT的CoAP协议浅析</strong></p>
-<p><a href="https://blog.csdn.net/liwei16611/article/details/82700365?ops_request_misc=&request_id=&biz_id=102&utm_term=基于NBIOT的coap&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-82700365" target="_blank" rel="noopener">https://blog.csdn.net/liwei16611/article/details/82700365?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=%E5%9F%BA%E4%BA%8ENBIOT%E7%9A%84coap&amp;utm_medium=distribute.pc_search_result.none-task-blog-2<del>all</del>sobaiduweb~default-0-82700365</a></p>
-<p><a href="https://wwe.lanzous.com/iXZ8ydtjy2h" target="_blank" rel="noopener">一张表搞懂CoAP</a></p>
-<h2 id="用Wireshark工具来抓取数据包"><a href="#用Wireshark工具来抓取数据包" class="headerlink" title="用Wireshark工具来抓取数据包"></a>用Wireshark工具来抓取数据包</h2><p>通过<strong>Wireshark</strong>来抓取CoAP协议的数据包，对数据包的学习掌握它的用法</p>
-<p>打开工具在地址栏里输入<code>udp.port == 5683</code>来找到想要的数据</p>
-<p><img src="https://i.loli.net/2020/06/19/quOEnM3NgmkFJxo.png" alt=""></p>
-<p>我们找到含有数据的一条数据包打开，可以看到底层是UDP的数据</p>
-<p>在上层封装了一些数据就变成了CoAP协议。</p>
-<p><img src="https://i.loli.net/2020/06/19/DlqysOVXGzgTFLB.png" alt=""></p>
-<pre class=" language-c"><code class="language-c"><span class="token number">42</span> <span class="token number">03</span> ef <span class="token number">89</span> 4d <span class="token number">55</span> b4 6d <span class="token number">71</span> <span class="token number">74</span> <span class="token number">74</span> <span class="token number">06</span> <span class="token number">74</span> <span class="token number">6f</span> <span class="token number">70</span> <span class="token number">69</span> <span class="token number">63</span> <span class="token number">31</span> <span class="token number">49</span> <span class="token number">63</span> 3d <span class="token number">63</span> 6c <span class="token number">69</span>  <span class="token number">65</span> 6e <span class="token number">74</span> <span class="token number">31</span> <span class="token number">05</span> <span class="token number">75</span> 3d <span class="token number">74</span> <span class="token number">6f</span> 6d <span class="token number">08</span> <span class="token number">70</span> 3d <span class="token number">73</span> <span class="token number">65</span> <span class="token number">63</span>  <span class="token number">72</span> <span class="token number">65</span> <span class="token number">74</span> ff <span class="token number">48</span> <span class="token number">65</span> 6c 6c <span class="token number">6f</span> <span class="token number">20</span> <span class="token number">77</span> <span class="token number">6f</span> <span class="token number">72</span> 6c <span class="token number">64</span> <span class="token number">21</span></code></pre>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+                <h2 id="修改液晶驱动来使屏幕正常显示"><a href="#修改液晶驱动来使屏幕正常显示" class="headerlink" title="修改液晶驱动来使屏幕正常显示"></a>修改液晶驱动来使屏幕正常显示</h2><p>购买的是兼容正点原子和野火的4.3寸RGB屏，它完美适配正点原子的开发板，野火的话定位槽不准，不好固定。</p>
+<p>参数：</p>
+<p>​                                                        <strong>分辨率                  480 * 272</strong></p>
+<p>​                                                        <strong>触摸驱动IC          GT9147</strong></p>
+<p>​                                                        <strong>接口类型              RGB565</strong></p>
+<p>1.根据野火的程序进行修改，需要在<code>gt9xx.c</code>中添加如下驱动程序（发现不添加也能正常使用）</p>
+<pre class=" language-c"><code class="language-c">uint8_t CTP_CFG_GT9147<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span><span class="token punctuation">{</span> 
+ <span class="token number">0x60</span><span class="token punctuation">,</span><span class="token number">0xe0</span><span class="token punctuation">,</span><span class="token number">0x01</span><span class="token punctuation">,</span><span class="token number">0x10</span><span class="token punctuation">,</span><span class="token number">0x01</span><span class="token punctuation">,</span><span class="token number">0x05</span><span class="token punctuation">,</span><span class="token number">0x0C</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x01</span><span class="token punctuation">,</span><span class="token number">0x08</span><span class="token punctuation">,</span>  
+ <span class="token number">0x28</span><span class="token punctuation">,</span><span class="token number">0x05</span><span class="token punctuation">,</span><span class="token number">0x50</span><span class="token punctuation">,</span><span class="token number">0x32</span><span class="token punctuation">,</span><span class="token number">0x03</span><span class="token punctuation">,</span><span class="token number">0x05</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span>
+ <span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x89</span><span class="token punctuation">,</span><span class="token number">0x28</span><span class="token punctuation">,</span><span class="token number">0x0a</span><span class="token punctuation">,</span>
+ <span class="token number">0x17</span><span class="token punctuation">,</span><span class="token number">0x15</span><span class="token punctuation">,</span><span class="token number">0x31</span><span class="token punctuation">,</span><span class="token number">0x0d</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x02</span><span class="token punctuation">,</span><span class="token number">0x9b</span><span class="token punctuation">,</span><span class="token number">0x03</span><span class="token punctuation">,</span><span class="token number">0x25</span><span class="token punctuation">,</span>
+ <span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x32</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span>
+ <span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x0f</span><span class="token punctuation">,</span><span class="token number">0x94</span><span class="token punctuation">,</span><span class="token number">0x94</span><span class="token punctuation">,</span><span class="token number">0xc5</span><span class="token punctuation">,</span><span class="token number">0x02</span><span class="token punctuation">,</span><span class="token number">0x07</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x04</span><span class="token punctuation">,</span>
+ <span class="token number">0x8d</span><span class="token punctuation">,</span><span class="token number">0x13</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x5c</span><span class="token punctuation">,</span><span class="token number">0x1e</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x3c</span><span class="token punctuation">,</span><span class="token number">0x30</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x29</span><span class="token punctuation">,</span>
+ <span class="token number">0x4c</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x1e</span><span class="token punctuation">,</span><span class="token number">0x78</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x1e</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span>
+ <span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span>
+ <span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span>
+ <span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span>
+ <span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x08</span><span class="token punctuation">,</span><span class="token number">0x0a</span><span class="token punctuation">,</span><span class="token number">0x0c</span><span class="token punctuation">,</span><span class="token number">0x0e</span><span class="token punctuation">,</span><span class="token number">0x10</span><span class="token punctuation">,</span><span class="token number">0x12</span><span class="token punctuation">,</span><span class="token number">0x14</span><span class="token punctuation">,</span><span class="token number">0x16</span><span class="token punctuation">,</span>
+ <span class="token number">0x18</span><span class="token punctuation">,</span><span class="token number">0x1a</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x1f</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span>
+ <span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span>
+ <span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x02</span><span class="token punctuation">,</span><span class="token number">0x04</span><span class="token punctuation">,</span><span class="token number">0x05</span><span class="token punctuation">,</span><span class="token number">0x06</span><span class="token punctuation">,</span><span class="token number">0x08</span><span class="token punctuation">,</span><span class="token number">0x0a</span><span class="token punctuation">,</span><span class="token number">0x0c</span><span class="token punctuation">,</span>
+ <span class="token number">0x0e</span><span class="token punctuation">,</span><span class="token number">0x1d</span><span class="token punctuation">,</span><span class="token number">0x1e</span><span class="token punctuation">,</span><span class="token number">0x1f</span><span class="token punctuation">,</span><span class="token number">0x20</span><span class="token punctuation">,</span><span class="token number">0x22</span><span class="token punctuation">,</span><span class="token number">0x24</span><span class="token punctuation">,</span><span class="token number">0x28</span><span class="token punctuation">,</span><span class="token number">0x29</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span>
+ <span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0x00</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span>
+ <span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span>
+ <span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0xff</span><span class="token punctuation">,</span><span class="token number">0x48</span><span class="token punctuation">,</span><span class="token number">0x01</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>在954行添加代码</p>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>buf<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'4'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//GT9147</span>
+<span class="token punctuation">{</span>
+    <span class="token function">GTP_INFO</span><span class="token punctuation">(</span><span class="token string">"IC2 Version: %c%c%c%c_%02x%02x"</span><span class="token punctuation">,</span> buf<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> buf<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> buf<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> buf<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span> buf<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span> buf<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>buf<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'9'</span> <span class="token operator">&amp;&amp;</span> buf<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'1'</span> <span class="token operator">&amp;&amp;</span> buf<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'4'</span> <span class="token operator">&amp;&amp;</span> buf<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'7'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>    
+        touchIC <span class="token operator">=</span> GT9147<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>        
+<span class="token punctuation">}</span></code></pre>
+<p>2.在<code>bsp_lcd.h</code>中23行修改代码如下</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> HBP  40        </span><span class="token comment" spellcheck="true">//HSYNC后的无效像素</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> VBP  8        </span><span class="token comment" spellcheck="true">//VSYNC后的无效行数</span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> HSW   1        </span><span class="token comment" spellcheck="true">//HSYNC宽度</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> VSW   1        </span><span class="token comment" spellcheck="true">//VSYNC宽度</span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> HFP      20        </span><span class="token comment" spellcheck="true">//HSYNC前的无效像素</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> VFP       5        </span><span class="token comment" spellcheck="true">//VSYNC前的无效行数</span>
+
+<span class="token comment" spellcheck="true">/* LCD Size (Width and Height) */</span>
+<span class="token macro property">#<span class="token directive keyword">define</span>  LCD_PIXEL_WIDTH        ((uint16_t)480)</span>
+<span class="token macro property">#<span class="token directive keyword">define</span>  LCD_PIXEL_HEIGHT       ((uint16_t)272)</span></code></pre>
+<p>修改了无效像素，这主要根据液晶的数据手册来修改</p>
+<p>修改了4.3寸屏的分辨率</p>
+<p>3.修改<code>bsp_lcd.c</code>中242行代码</p>
+<pre class=" language-c"><code class="language-c"><span class="token function">RCC_PLLSAIConfig</span><span class="token punctuation">(</span><span class="token number">420</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
             </div>
             <hr/>
 
@@ -426,7 +468,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yaoyufan96.tk/posts/2937813511/">http://yaoyufan96.tk/posts/2937813511/</a>
+                    <a href="http://yaoyufan96.tk/posts/94366873/">http://yaoyufan96.tk/posts/94366873/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -464,8 +506,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CoAP/">
-                                    <span class="chip bg-color">CoAP</span>
+                                <a href="/tags/STemwin/">
+                                    <span class="chip bg-color">STemwin</span>
                                 </a>
                             
                         </div>
@@ -633,9 +675,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/94366873/">
                     <div class="card-image">
@@ -655,9 +698,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -666,6 +709,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -684,19 +728,21 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/14201218/">
+                <a href="/posts/2937813511/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="在Window10本地安装EMQ实现MQTT连接">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="CoAP协议解析">
                         
-                        <span class="card-title">在Window10本地安装EMQ实现MQTT连接</span>
+                        <span class="card-title">CoAP协议解析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. EMQ简介​        EMQ是一款完全开源，高度可伸缩，高可用的分布式 MQTT 消息服务器，同时也支持 CoAP/LwM2M 一站式 IoT 协议接入。EMQ 是 5G 时代万物互联的消息引擎，适用于 IoT、M2M 和移动应
+                            CoAP协议的基础知识这边就不多说了，具体可以通过下面的文章、表格进行学习:
+基于NB-IoT的CoAP协议浅析
+https://blog.csdn.net/liwei16611/article/details/82700365?ops_r
                         
                     </div>
                     <div class="publish-info">
@@ -714,8 +760,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/EMQ/">
-                        <span class="chip bg-color">EMQ</span>
+                    <a href="/tags/CoAP/">
+                        <span class="chip bg-color">CoAP</span>
                     </a>
                     
                 </div>
