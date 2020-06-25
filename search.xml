@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>在野火F429上跑RT-Thread遇到的问题</title>
+      <link href="/posts/1013023409/"/>
+      <url>/posts/1013023409/</url>
+      
+        <content type="html"><![CDATA[<h2 id="遇到的问题（持续更新）"><a href="#遇到的问题（持续更新）" class="headerlink" title="遇到的问题（持续更新）"></a>遇到的问题（持续更新）</h2><p>1.使用RT-Thread的BSP时，野火F429BSP在ENV中开启了USART2发现ESP8266初始化就卡死了。后来发现虽然开启了但是在CUBEMX生成的文件中并没有初始化USART2引脚，这太坑爹了。需要在CUBEMX中关闭LTDC的引脚初始化，再开启USART2引脚初始化，两者打架了！</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> RT-Thread </tag>
+            
+            <tag> stm32f429-fire-challenger </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>移植4.3寸RGB屏驱动到野火F429V1开发板</title>
       <link href="/posts/94366873/"/>
       <url>/posts/94366873/</url>

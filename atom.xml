@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yaoyufan96.tk/"/>
-  <updated>2020-06-24T13:54:27.866Z</updated>
+  <updated>2020-06-25T04:04:08.068Z</updated>
   <id>http://yaoyufan96.tk/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在野火F429上跑RT-Thread遇到的问题</title>
+    <link href="http://yaoyufan96.tk/posts/1013023409/"/>
+    <id>http://yaoyufan96.tk/posts/1013023409/</id>
+    <published>2020-06-25T03:56:42.000Z</published>
+    <updated>2020-06-25T04:04:08.068Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;遇到的问题（持续更新）&quot;&gt;&lt;a href=&quot;#遇到的问题（持续更新）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="RT-Thread" scheme="http://yaoyufan96.tk/tags/RT-Thread/"/>
+    
+      <category term="stm32f429-fire-challenger" scheme="http://yaoyufan96.tk/tags/stm32f429-fire-challenger/"/>
+    
+  </entry>
   
   <entry>
     <title>移植4.3寸RGB屏驱动到野火F429V1开发板</title>
